@@ -1,0 +1,407 @@
+/*************GLOBAL**************/
+
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+
+/* largeur max de 1400px pr gérer les grands écrans */
+body{
+max-width: 1400px; 
+font-family: 'Raleway', sans-serif;
+margin:0 30px 0 30px;
+}
+
+/*************FIN GLOBAL**************/
+/*************************************/
+
+
+/*************DEBUT DU HEADER**************/
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:-12px;
+}
+
+header .logo:hover{
+    text-decoration: none;
+}
+
+header img{
+    width: 60px;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+
+header nav ul a{
+    text-decoration: none;
+    color:black;
+    display: inline-block;
+    padding:20px;
+}
+header nav a:hover{
+    text-decoration: none;
+    color:#0065FC;
+    box-shadow: 0px -4px 0px 0px #0065FC;
+    /* faire en sorte que bordure atteigne haut de la page */
+}
+
+/**********FIN DU HEADER *********/
+/*********************************/
+
+/*************DEBUT DU MAIN**************/
+
+/*********DEBUT INTRO**********/
+
+/*********DEBUT PARTIE 1 INTRO **********/
+h1{
+    font-size: 22px;
+    font-weight: 700;
+}
+.intro p{
+    font-size:16px; /*même police que le paragprahe info*/
+}
+
+::placeholder{
+    font-weight: 700;
+    color:black;
+    font-size: 16px;
+    text-indent: 10px;
+
+}
+input{
+    border: solid 1px #F2F2F2;
+    width: 210px;
+}
+form{
+    margin-bottom: 30px;
+}
+form label{
+    position:absolute;
+    left:-999px; /*il n'apparaitra plus visuellement de l'écran*/
+}
+form > *{
+    height: 50px;
+}
+
+form button{
+    text-decoration:none;
+    font-size: 16px;
+    border-radius: 0 15px 15px 0; 
+    background-color: #0065FC;
+    color:white;
+    font-weight: 700;
+    border: none;
+    margin-left:-5px
+}
+
+.fa-map-marker-alt{
+    color:black;
+    font-size: 16px;
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+    padding: 15px;
+    margin-right:-5px;
+}
+/*********FIN PARTIE 1 INTRO **********/
+
+/*********DEBUT FILTRES**********/
+
+.filtres{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    font-weight: bold;
+}
+
+.filtres-categories{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+
+.arrondi a{
+    font-weight: bold;
+    border: solid 3px #F2F2F2;
+    border-radius: 50px;
+    text-decoration: none;
+    color:black;
+    padding:10px 15px 10px 15px;
+    margin-left:25px; /*enlever cette margin dans le media query pr mobile*/
+}
+
+.filtres-categories *:hover{
+    color:#0065FC;
+    cursor: pointer;
+    transform: scale(1.05);   
+    transition: 0.3s;
+}
+
+.fa-money-bill-wave, .icone_cercle, .fa-heart, .fa-dog {
+    color:#0065FC;  
+    margin-right:10px;
+}
+
+/*********FIN FILTRES**********/
+
+/*********DEBUT INFO**********/
+.fa-info{
+    font-size: 12px;
+    color:#0065FC;
+    border:solid 2px #F2F2F2;
+    border-radius: 50%;
+    padding:5px 8px;
+    margin-right:5px;
+}
+.info p{
+    font-size: 16px;
+}
+.info{
+    display: flex;
+    align-items: center;
+    margin-bottom:15px;
+}
+
+/*********DEBUT INFO**********/
+
+/*********FIN INTRO**********/
+/****************************/
+
+
+
+/*************SECTION HEBERGEMENTS*********/
+
+.first-section h2{
+    font-size: 22px; /*même chose pour h2 partie activités*/
+}
+
+/*hebergements à Marseille*/
+
+.first-section{
+    display:flex;
+    justify-content: space-between;
+}
+
+.first-section .fa-duotone{
+    color:#F2F2F2;
+}
+
+.first-section .fa-solid{
+    color:#0065FC;
+}
+
+#hebergements{
+    background-color:#F2F2F2;
+    border-radius: 20px;
+    width:70%; /* donc section populaires prend le reste*/
+    padding: 20px;
+}
+#hebergements .afficher-plus{
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color:black;
+    
+}
+#hebergements .gallery-1{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#hebergements .gallery-1 a{
+    text-decoration: none;
+    color:black;
+}
+
+#hebergements article h3{
+    font-size: 16px;
+}
+#hebergements article p{
+    font-size: 14px;
+}
+
+.cards{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 20px 20px 50px #F2F2F2;
+}
+
+.h-cards{
+    width:250px;
+    border: solid 4px white;
+    margin-top:25px;
+    line-height: 1;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 6%);
+}
+
+.h-cards img{
+    width:100%;
+    height:150px;
+    object-fit: cover;
+    border-radius:20px 20px 0 0;    
+}
+
+#hebergements .gallery-1 a:hover{
+    transform: scale(1.07);
+    transition: 0.8s;
+}
+
+/*Partie hébergements populaires*/
+
+.section-populaires{
+    background-color:#F2F2F2 ;
+    border-radius: 20px;
+    width: 27%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+}
+.section-populaires h3{
+    font-size: 16px;
+}
+.section-populaires p{
+    font-size: 14px;
+}
+
+.populaires-flex{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+}
+.p-cards{
+    margin:20px;
+    width:90%;
+    height:150px;
+    display: flex;
+    flex-direction: row;
+    border: solid 4px white;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 6%);
+}
+
+.p-cards img{
+    border-radius:20px 0 0 20px;
+    width: 40%;
+    height:auto;
+    object-fit: cover;
+}
+.fa-chart-line{
+    color:#0065FC;
+    align-self: center;
+    font-size:  18px;
+}
+
+.div-flex{
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+}
+
+.section-populaires a{
+    text-decoration: none;
+    color:black;
+}
+
+.section-populaires a:hover{
+    transform: scale(1.07);
+    transition: 0.8s;
+}
+
+.populaires-flex a article{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:stretch;
+    padding-left: 10px;
+}
+/*Partie activites*/
+
+#activites{
+    margin-bottom: 30px;
+}
+#activites h2{
+    font-size: 22px; /*même chose pour h2 partie hebergements*/
+}
+
+.activites-flex{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.activites-flex a{
+    width:23%;
+}
+.a-cards{
+    height:450px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 6%);
+}
+.a-cards img{
+    border-radius:20px 20px 0 0;
+    height:90%;
+    width: 100%;
+    object-fit: cover;
+}
+#activites a{
+    text-decoration: none;
+    color:black;
+}
+
+#activites a:hover{
+    transform: scale(1.07);
+    transition: 0.8s;
+}
+
+#activites .a-cards h3{
+    font-size: 16px;
+    margin:0;
+    align-self: center;
+    line-height: 1;
+    text-indent: 15px;
+    padding-top: 10px;
+}
+/**********FIN DU MAIN *********/
+/*******************************/
+
+
+
+/*************DEBUT DU FOOTER**************/
+footer{
+    background-color:#F2F2F2;
+    display: flex;
+    justify-content: space-between;
+}
+footer nav{
+    width:33.3%;
+    padding-left:45px;
+}
+footer ul{
+    list-style: none;
+    font-size: 16px;
+    padding-left: 0; /* pour supprimer l'indentation par défaut*/
+}
+footer ul li{
+    line-height: 1.5;
+}
+
+footer h3{
+    font-weight:bold;
+    font-size: 18px;
+}
+footer a{
+    text-decoration:none;
+    color:black;
+}
+
+
+/**********FIN DU FOOTER *********/

@@ -12,7 +12,8 @@ html{
 body{
 max-width: 1400px; 
 font-family: 'Raleway', sans-serif;
-margin:0 30px 0 30px;
+margin:auto;
+padding:0 2em;
 }
 
 /*************FIN GLOBAL**************/
@@ -24,7 +25,6 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-top:-12px;
 }
 
 header .logo:hover{
@@ -52,7 +52,6 @@ header nav a:hover{
     text-decoration: none;
     color:#0065FC;
     box-shadow: 0px -4px 0px 0px #0065FC;
-    /* faire en sorte que bordure atteigne haut de la page */
 }
 
 /**********FIN DU HEADER *********/
@@ -68,7 +67,7 @@ h1{
     font-weight: 700;
 }
 .intro p{
-    font-size:16px; /*même police que le paragprahe info*/
+    font-size:16px; /*même taille que le paragprahe info*/
 }
 
 ::placeholder{
@@ -111,6 +110,19 @@ form button{
     border-radius: 15px 0 0 15px;
     padding: 15px;
     margin-right:-5px;
+}
+
+.intro .fa-magnifying-glass{
+    display: none;
+    color:white;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #0065FC;
+    width: 49px;
+    height: 49px;
+    padding: 15px 16px 15px 16px;
+    gap:10px;
+    border-radius: 0 15px 15px 0;
 }
 /*********FIN PARTIE 1 INTRO **********/
 
@@ -189,6 +201,7 @@ form button{
 .first-section{
     display:flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .first-section .fa-duotone{
@@ -203,13 +216,16 @@ form button{
     background-color:#F2F2F2;
     border-radius: 20px;
     width:70%; /* donc section populaires prend le reste*/
-    padding: 20px;
+    padding: 10px 20px;
 }
 #hebergements .afficher-plus{
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
     color:black;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: inline-block;
     
 }
 #hebergements .gallery-1{
@@ -255,6 +271,14 @@ form button{
     transition: 0.8s;
 }
 
+#hebergements .h-cards h3, #hebergements .h-cards p, #hebergements .h-cards .stars-hebergements{
+    padding-left:10px;
+}
+
+#hebergements .h-cards .stars-hebergements{
+    padding-bottom:5px;
+}
+
 /*Partie hébergements populaires*/
 
 .section-populaires{
@@ -262,9 +286,10 @@ form button{
     border-radius: 20px;
     width: 27%;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    height:auto;
 }
 .section-populaires h3{
     font-size: 16px;
@@ -275,12 +300,10 @@ form button{
 
 .populaires-flex{
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-    align-items: stretch;
+    padding-block: 18px;
 }
 .p-cards{
-    margin:20px;
     width:90%;
     height:150px;
     display: flex;
@@ -303,13 +326,14 @@ form button{
 
 .div-flex{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin:0;
 }
 
 .section-populaires a{
     text-decoration: none;
     color:black;
+    padding-block: inherit;
 }
 
 .section-populaires a:hover{
@@ -348,7 +372,7 @@ form button{
 }
 .a-cards img{
     border-radius:20px 20px 0 0;
-    height:90%;
+    height: 86%;
     width: 100%;
     object-fit: cover;
 }
@@ -364,11 +388,11 @@ form button{
 
 #activites .a-cards h3{
     font-size: 16px;
-    margin:0;
-    align-self: center;
+    margin: 0 0;
     line-height: 1;
-    text-indent: 15px;
-    padding-top: 10px;
+    display: inline-block;
+    padding-left: 15px;
+    padding-top: 10px;   
 }
 /**********FIN DU MAIN *********/
 /*******************************/
@@ -380,6 +404,8 @@ footer{
     background-color:#F2F2F2;
     display: flex;
     justify-content: space-between;
+    padding-top:25px;
+    padding-bottom:25px;
 }
 footer nav{
     width:33.3%;
@@ -405,3 +431,173 @@ footer a{
 
 
 /**********FIN DU FOOTER *********/
+
+/*********************************/
+/***********MEDIA QUERIES*********/
+/*********************************/
+
+
+/*********************************/
+/***********TABLETTE**************/
+/*********************************/
+
+@media  (min-width: 768px) and (max-width: 992px){
+    header nav a:hover{
+        box-shadow: none;
+    }
+    
+    #hebergements{
+        width:100%;
+    }
+
+    .section-populaires{
+        width: 100%;
+        margin-top:40px;
+    }
+
+    .populaires-flex{
+        flex-direction: row;
+    }
+    .section-populaires a {
+        width: 33%;
+    }
+
+    .a-cards{
+        height: 340px;
+    }
+}
+
+/*********************************/
+/*************MOBILE**************/
+/*********************************/
+
+@media (max-width: 768px){
+
+    body{
+        padding:0;
+    }
+    header {
+        display: flex;
+        margin-top: 25px;
+        flex-direction: column;
+    }
+
+   header nav{
+        width:100%;
+   }
+
+   header nav ul{
+        justify-content: space-around;
+        padding-left: 0;
+   }
+
+   header nav ul a{
+        width: 100%;
+   }
+
+   header nav a:hover{
+        text-decoration: none;
+        color:#0065FC;
+        box-shadow: 0px 4px 0px 0px #0065FC;
+   }
+
+   .intro{
+        padding-right:20px;
+        padding-left:20px;
+   }
+
+
+   .intro .fa-magnifying-glass{
+        display: inline-block;
+        margin-left:-5px;
+   }
+
+   .intro form{
+    display: inline;
+    width: 100%;
+    text-align: center;
+   }
+
+   .intro .fa-magnifying-glass:hover{
+    cursor: pointer;
+   }
+   .intro button{
+        display:none;
+   }
+
+   .first-section{
+        border-radius: 0px;
+        margin-bottom:15%;
+   }
+
+   .section-populaires{
+    width:100%;
+    border-radius: unset;
+    order: 1;
+    }
+
+    .section-populaires a{
+        display: flex;
+        justify-content: center;
+    }
+
+   #hebergements{
+        width:100%;
+        flex-wrap: wrap;
+        border-radius: unset;
+        background-color: unset;
+        order:2;
+   }
+
+   .gallery-1 a{
+        width: 100%;
+        padding: 0;
+        display: inline-block;
+   }
+
+   .gallery-1 .h-cards{
+        width: 100%;
+   }
+
+   #hebergements .afficher-plus{
+        display:none;
+   }
+
+
+   /**********activites*********/
+   #activites{
+        order: 3;
+        padding:20px 20px; /*même chose que class intro*/
+   }
+   .activites-flex{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+   }
+    .activites-flex a{
+        width:100%;
+    }
+
+    .a-cards{
+        height:200px;
+        margin-bottom: 20px;
+    }
+
+    .a-cards img {
+        height:80%;
+    }
+
+    footer{
+        display:block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+    footer nav{
+        width: auto;
+    }
+
+    footer ul li {
+        line-height: 2;
+    }
+}

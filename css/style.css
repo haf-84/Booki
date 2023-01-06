@@ -525,9 +525,12 @@ footer a{
    }
 
    .intro form{
-    display: inline;
     width: 100%;
     text-align: center;
+   }
+
+   .intro form input{
+    width: 70%;
    }
 
    .intro .fa-magnifying-glass:hover{
@@ -602,7 +605,7 @@ footer a{
     .a-cards img {
         height:80%;
     }
-
+    /**************footer**************/
     footer{
         display:block;
         padding-top: 20px;
@@ -611,6 +614,7 @@ footer a{
     }
     footer nav{
         width: auto;
+        padding-left: 20px;
     }
 
     footer ul li {

@@ -25,6 +25,7 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -12px; /* pour que bordure bleue soit collée en haut*/
 }
 
 header .logo:hover{
@@ -53,6 +54,7 @@ header nav a:hover{
     color:#0065FC;
     box-shadow: 0px -4px 0px 0px #0065FC;
 }
+
 
 /**********FIN DU HEADER *********/
 /*********************************/
@@ -135,6 +137,10 @@ form button{
     font-weight: bold;
 }
 
+.filtres > p{
+    margin-right: 25px;
+}
+
 .filtres-categories{
     display: flex;
     flex-wrap:wrap;
@@ -148,7 +154,7 @@ form button{
     text-decoration: none;
     color:black;
     padding:10px 15px 10px 15px;
-    margin-left:25px; /*enlever cette margin dans le media query pr mobile*/
+    margin-right:25px; /*enlever cette margin dans le media query pr mobile*/
 }
 
 .filtres-categories *:hover{
@@ -230,10 +236,11 @@ form button{
 }
 #hebergements .gallery-1{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 #hebergements .gallery-1 a{
+    width:30%;
     text-decoration: none;
     color:black;
 }
@@ -252,7 +259,6 @@ form button{
 }
 
 .h-cards{
-    width:250px;
     border: solid 4px white;
     margin-top:25px;
     line-height: 1;
@@ -491,8 +497,13 @@ footer a{
         padding-left: 0;
    }
 
+   header nav ul li{
+    flex:1;
+   }
+
    header nav ul a{
         width: 100%;
+        text-align: center;
    }
 
    header nav a:hover{
@@ -500,6 +511,7 @@ footer a{
         color:#0065FC;
         box-shadow: 0px 4px 0px 0px #0065FC;
    }
+
 
    .intro{
         padding-right:20px;
@@ -549,7 +561,11 @@ footer a{
         order:2;
    }
 
-   .gallery-1 a{
+   #hebergements .gallery-1 {
+    display: flex;
+    }
+
+   #hebergements .gallery-1 a{
         width: 100%;
         padding: 0;
         display: inline-block;
